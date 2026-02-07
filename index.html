@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Moments 💖</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Starting Page -->
+<div class="start-page" id="start">
+    <h1>Let me show a few moments of us!! 💕</h1>
+
+    <p class="poetry">
+        "In the pages of my life,  
+        you are my favorite chapter."
+    </p>
+
+    <p class="poetry">
+        "Some moments stay forever,  
+        because they were lived with you."
+    </p>
+
+    <a href="#slider" class="btn">Start 💫</a>
+</div>
+
+<!-- Slider Section -->
+<div id="slider" class="slider">
+
+    <img id="photo" src="photos/photo1.jpg" alt="memory">
+    <p id="caption">"Where it all started."</p>
+
+    <button class="next-btn" onclick="nextPhoto()">Next ➜</button>
+
+</div>
+
+<!-- Birthday Message -->
+<div class="birthday">
+    <h2>Happy Birthday 🎂🎉</h2>
+    <p>
+        May your life be as colorful as these memories,  
+        and as beautiful as your smile 💖
+    </p>
+</div>
+
+<!-- JavaScript -->
+<script>
+    const photos = [
+        { img: "photos/photo1.jpg", text: "Where it all started." },
+        { img: "photos/photo2.jpg", text: "Smiles that felt like home." },
+        { img: "photos/photo3.jpg", text: "Moments I never want to forget." },
+        { img: "photos/photo4.jpg", text: "Laughter caught forever." },
+        { img: "photos/photo5.jpg", text: "You made everything brighter." },
+        { img: "photos/photo6.jpg", text: "Pure happiness in one frame." },
+        { img: "photos/photo7.jpg", text: "A bond beyond words." },
+        { img: "photos/photo8.jpg", text: "Every photo, a heartbeat." },
+        { img: "photos/photo9.jpg", text: "Distance never changed us." },
+        { img: "photos/photo10.jpg", text: "Forever us 💙" }
+    ];
+
+    let index = 0;
+
+    function nextPhoto() {
+        index++;
+        if (index >= photos.length) {
+            index = 0;
+        }
+
+        document.getElementById("photo").src = photos[index].img;
+        document.getElementById("caption").innerText = `"${photos[index].text}"`;
+    }
+</script>
+
+</body>
+</html>
